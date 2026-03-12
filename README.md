@@ -136,6 +136,7 @@
 ## 仓库结构
 
 - [SKILL.md](./SKILL.md)
+- [CHANGELOG.md](./CHANGELOG.md)
 - [ROADMAP.md](./ROADMAP.md)
 - [evals/evals.json](./evals/evals.json)
 - [references/checklists.md](./references/checklists.md)
