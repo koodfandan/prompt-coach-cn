@@ -2,6 +2,8 @@
 
 一个中文优先的 Codex 提示词设计 skill。
 
+[English README](./README.en.md)
+
 它不是“提示词模板合集”，而是一个会先理解任务、再优化需求、最后生成更合适 prompt 或成品的前置建模层。
 
 ---
