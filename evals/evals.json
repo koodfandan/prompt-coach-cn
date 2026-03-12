@@ -1,0 +1,405 @@
+﻿{
+    "skill_name":  "prompt-coach-cn",
+    "evals":  [
+                  {
+                      "id":  1,
+                      "prompt":  "我想做一个提示词，让 AI 帮我把读书笔记整理成适合发朋友圈的 120 字短文，但语气不要鸡汤，也不要像广告。你先帮我把这个需求变成稳定的 prompt。",
+                      "expected_output":  "Should classify the request as prompt generation, produce a Chinese copy-paste prompt, and make the tone and output constraints explicit.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  2,
+                      "prompt":  "这个 prompt 很乱，像伪代码。你帮我保留逻辑不变，改成人能读懂的结构化中文 prompt。示例不能改。",
+                      "expected_output":  "Should choose structure conversion, preserve examples, and output a readable structured Chinese prompt.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  3,
+                      "prompt":  "我现在写的 prompt 非常长，而且有时候输出忽长忽短、字段还会乱掉。帮我压缩并修稳，最好顺手告诉我问题在哪。",
+                      "expected_output":  "Should diagnose instability before compression, produce a compressed stable prompt, and include a short critique of the original weaknesses.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  4,
+                      "prompt":  "帮我写一个提示词，我想用十分钟快速了解一本书。我不只是想知道它讲了什么，我还想知道它为什么重要、作者是在什么情况下写出来的、这本书为什么值得读。",
+                      "expected_output":  "Should not default to a plot-summary prompt. It should recognize that the user wants a book-insight prompt and include content, creation background, author context, significance, and reading value.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  5,
+                      "prompt":  "帮我写一个 prompt，我只想十分钟知道百年孤独讲了什么，人物关系和结局搞明白就行，不用展开作者背景和社会影响。",
+                      "expected_output":  "Should stay summary-oriented. It should optimize for story clarity and not upgrade the request into a full book-insight or dossier prompt.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  6,
+                      "prompt":  "帮我写一个 prompt，我想十分钟搞懂百年孤独为什么重要、它是怎么写出来的、它对文学产生了什么影响，不需要太详细的剧情。",
+                      "expected_output":  "Should route to an insight-oriented prompt, not a story-summary prompt. It should foreground significance, creation background, and influence over plot detail.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  7,
+                      "prompt":  "帮我写一个故事提示词，我希望 AI 一次直接写出完整成稿，不要先列大纲再展开。",
+                      "expected_output":  "Should produce a direct one-shot story prompt and avoid forcing a staged workflow.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  8,
+                      "prompt":  "帮我写一个情感短篇故事提示词，我希望它先抓情感核心、意象、开头结尾，再慢慢展开正文。",
+                      "expected_output":  "Should recognize that the user wants a staged creative workflow and produce a multi-step story prompt rather than a one-shot draft prompt.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  9,
+                      "prompt":  "帮我写一个提示词，主题就是『我用 AI 造了台时光机，带你看如果明朝没灭亡的 2025 年』。我要的是这一条题目的成品 prompt，不需要做成以后换题还能用的引擎。",
+                      "expected_output":  "Should stay at the topic-prompt level. It should write one strong prompt for this exact Ming-2025 idea and avoid over-abstracting the request into a reusable engine.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  10,
+                      "prompt":  "帮我写一个可复用的『如果时光机』提示词。以后我只要换一个历史假设、分歧点和观察终点，就能继续推演别的平行时空，不要只围着明朝这个例子写。",
+                      "expected_output":  "Should route to an engine prompt, not a one-off topic prompt. It should define reusable inputs, a simulation workflow, presentation modules, and self-check rules that still work after replacing the example topic.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  11,
+                      "prompt":  "我给你一个很美的标题：『四维视角下的空气密码：一场跨越时空的循环之旅』。但我真正想做的不是只写空气，我想要一个提示词，能输入任意职业或词汇，输出它最核心的循环。不要被标题带偏。",
+                      "expected_output":  "Should not lock onto the poetic title as the task itself. It should recover the broader input/output contract and write a reusable cycle-extraction prompt.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  12,
+                      "prompt":  "帮我优化这个 prompt，但里面那组固定追问不能丢。那些问题不是装饰，而是它稳定输出的核心框架。你要保留这种机制。",
+                      "expected_output":  "Should recognize the hidden question scaffold as part of the mechanism, preserve it during optimization, and avoid compressing it away as flavor text.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  13,
+                      "prompt":  "这个 prompt 用『空气』的时候效果很好，但我担心它一换成『桥』『医学』『种子』就塌。帮我重写成一个更可迁移的版本。",
+                      "expected_output":  "Should optimize for transferability rather than one-example brilliance. It should strengthen the reusable structure so the same prompt can survive input swaps across different concepts.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  14,
+                      "prompt":  "帮我写一个提示词，我会提供歌曲名和完整歌词，让 AI 把它翻译成一个新的完整故事。重点是和歌词高度适配，不是自由发挥，也不要顺手写歌曲解析。",
+                      "expected_output":  "Should classify the task as source-constrained translation, treat title and lyrics as evidence, and output a Chinese prompt optimized for a faithful finished story rather than generic theme expansion or commentary.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  15,
+                      "prompt":  "题目是『听歌时，你脑海里会浮现故事吗？我用 AI 让每首歌都有了灵魂』，但我真正要的不是围着这句标题写一条文艺 prompt，而是一个可复用的『歌曲+歌词 -> 新故事』提示词。不要被标题带偏。",
+                      "expected_output":  "Should not follow the showcase title literally. It should recover the broader song-plus-lyrics to story contract and produce a reusable prompt for that transformation task.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  16,
+                      "prompt":  "帮我优化这个歌曲转故事 prompt，但里面那组固定追问不能丢。它们在控制谁在说、写给谁、意象和余韵，是机制不是文案。",
+                      "expected_output":  "Should preserve the hidden question scaffold because it controls the translation lens. It should optimize the prompt without deleting the questions as decorative flavor.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  17,
+                      "prompt":  "这个歌曲转故事 prompt 测《父亲》很稳，但我担心测《小苹果》或者更轻快的歌时，也会被写成牺牲、救赎、永恒那一路。帮我重写得更抗情绪偏置。",
+                      "expected_output":  "Should recognize bias control as the main job. It should reduce sentimental overfitting and make the prompt more sensitive to source-specific emotional shape across different songs.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  18,
+                      "prompt":  "我有一段新品发布会采访逐字稿，帮我写一个提示词，把它整理成适合公众号发布的正式稿件。重点保留发言人的真实意思和信息顺序，不要改写成营销鸡汤。",
+                      "expected_output":  "Should classify the task as source-constrained translation, treat the interview transcript as evidence, and output a prompt optimized for a faithful finished article rather than free brand copywriting.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  19,
+                      "prompt":  "帮我写一个可复用的 prompt。以后我只要输入一个城市名和一个人物视角，就能生成一条 90 秒城市微纪录片的选题、结构和镜头建议。不要只围着上海这个例子写。",
+                      "expected_output":  "Should route to a reusable engine prompt rather than a one-off topic prompt. It should define variable inputs, repeatable output modules, and a stable workflow that survives city and viewpoint swaps.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  20,
+                      "prompt":  "帮我写一个 prompt，我想 15 分钟搞懂《纯粹理性批判》到底在解决什么问题、为什么难、为什么重要，不需要太细的章节摘要。",
+                      "expected_output":  "Should route to an insight-oriented prompt, not a chapter summary prompt. It should optimize for problem framing, significance, and interpretive clarity over plot-like compression.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  21,
+                      "prompt":  "我有一份博物馆展览导览词，想让 AI 改写成适合短视频讲解的口播脚本。请忠于原导览词的信息，不要自己乱补历史细节，也不要写成学术论文。",
+                      "expected_output":  "Should classify the task as source-constrained translation, treat the guide text as evidence, and produce a prompt for faithful oral-script transformation with output-style constraints.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  22,
+                      "prompt":  "帮我优化这个品牌访谈提纲 prompt。现在每次都问得很散，我真正要的是能稳定挖出品牌创始人的转折点、价值观、关键决策和失败教训。",
+                      "expected_output":  "Should treat the main job as structural stabilization and intermediate-representation design. It should rebuild the prompt around consistent interview lenses instead of only polishing wording.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  23,
+                      "prompt":  "围绕『城市深夜里的温柔瞬间』帮我写一个 prompt。我要的是几个深夜场景串起来的切片式短文，不要硬写成一个人物命运很重的完整故事。",
+                      "expected_output":  "Should keep the task in a scene-based slice essay unit. It should not over-escalate the request into a character-driven story arc.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  24,
+                      "prompt":  "围绕『城市深夜里的温柔瞬间』帮我写一个故事 prompt。这次我不要切片组文，我要一个有主角、有转折、有收束的单人物短篇。",
+                      "expected_output":  "Should choose a character-driven short story unit rather than a slice essay, and make the protagonist arc explicit.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  25,
+                      "prompt":  "帮我写一个关于『AI 如何帮普通人把兴趣变成收入』的 prompt。我要的是一篇有一个完整普通人案例贯穿的文章，不要只做泛泛分析。",
+                      "expected_output":  "Should choose a case-driven article unit, not a broad analytical explainer. It should center one representative path and build the prompt around that sample.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  26,
+                      "prompt":  "帮我写一个关于『完蛋！动漫世界反入侵人类世界』的 prompt。我不要世界观样章，我要一个被卷进去的普通人视角短篇故事，重点是他的选择和代价。",
+                      "expected_output":  "Should choose a character-driven short story unit instead of a worldbuilding sample, and make conflict, choice, and consequence central.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  27,
+                      "prompt":  "客户一口气提了很多功能需求，但我怀疑这些都只是表层。我想让 AI 不要直接给方案，而是一步步带我找到这些需求背后真正想解决的核心问题。帮我写 prompt。",
+                      "expected_output":  "Should classify this as essence extraction or guided inquiry, not direct solution generation. It should produce a Socratic-style prompt that helps the user move from surface requests to the core need.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  28,
+                      "prompt":  "我总是在不同关系里遇到类似的问题。我不要一篇安慰我的文章，我要一个 prompt，让 AI 通过提问带我看清我到底在重复什么模式。",
+                      "expected_output":  "Should route to guided inquiry, preserve the need for progressive questioning, and avoid collapsing the request into a reflective explainer or advice article.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  29,
+                      "prompt":  "帮我写一个 prompt，我想搞清一个团队效率低下的问题本质是什么。重点不是马上给管理建议，而是先层层逼近真正的根因。",
+                      "expected_output":  "Should choose essence extraction with root-cause discovery rather than an actionable management guide. It should emphasize questioning, synthesis, and validation before recommendations.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  30,
+                      "prompt":  "帮我优化这个『挖掘问题本质』的 prompt，但别让它太早下结论。我希望 AI 先追问、再提炼、最后再和用户确认，而不是一开始就装得很深刻。",
+                      "expected_output":  "Should recognize premature essence claims as the main failure mode. It should keep the prompt discovery-oriented, preserve staged questioning, and include a validation step before declaring the root.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  31,
+                      "prompt":  "我不要一篇分析三只小猪象征意义的文章。我想要一个 prompt，让我像审讯一样进入一个病人的精神世界，和不同人格对话，逐步揭露三只小猪、怪物和宫殿的关系。",
+                      "expected_output":  "Should classify this as symbolic-world roleplay or embodied simulation, not analytical explanation. It should define a staged container, persona switching, reveal order, and a playable transcript-like output.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  32,
+                      "prompt":  "帮我写一个 prompt，重点不是解释童话，而是把童话意象做成一个可以进入和对话的精神舞台。用户要在里面提问，角色会切换状态并逐步暴露真相。",
+                      "expected_output":  "Should recover the task as an enterable symbolic system. It should include a container, symbol map, state map, trigger logic, and reveal ladder instead of defaulting to essay analysis.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  33,
+                      "prompt":  "帮我优化这个精神世界角色扮演 prompt，但别把它压缩成普通 persona 对话。审讯室场景、人格切换触发、揭露顺序和复活机制都要保留，因为这些不是氛围，是机制。",
+                      "expected_output":  "Should recognize scene container, switching triggers, reveal order, and anti-dead-end mechanics as structural guardrails. It should preserve them during optimization instead of compressing them away as style.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  34,
+                      "prompt":  "我想借三只小猪探索一个人的内心，但不要猎奇，不要伪诊断。帮我写一个有沉浸感的 prompt，同时明确这是文学化、象征化的精神世界探索，不是现实医疗判断。",
+                      "expected_output":  "Should keep the request in symbolic-world roleplay while adding a clear literary-symbolic safety boundary. It should avoid diagnosis theater and keep the prompt immersive without becoming stigmatizing.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  35,
+                      "prompt":  "以如果情绪有实体颜色为主题，写一篇故事。",
+                      "expected_output":  "Should still apply the skill silently even without the word prompt. It should infer the correct artifact unit, avoid drifting into explainer mode, and produce a character-centered short story rather than a settings memo.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  36,
+                      "prompt":  "如果你能通过AI看清事物的本质，写一篇文章。",
+                      "expected_output":  "Should still apply the skill silently to optimize the need, choose an analytical explainer unit, and produce a finished article instead of forcing visible prompt output.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  37,
+                      "prompt":  "帮我写一个提示词，主题是『二维码遇到斑马』。我要的是轻巧一点的小寓言，不要套成你平时那种通用故事模板，要让这个主题自己的黑白对照和指路感长出来。",
+                      "expected_output":  "Should not reuse a generic story shell too visibly. It should extract the theme-native handle such as black-white contrast, recognition versus movement, and guidance, then produce a more bespoke prompt.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  38,
+                      "prompt":  "帮我写两个提示词，一个是『如果情绪有实体颜色』，一个是『便利店卖人生体验卡』。它们都属于奇想类，但我不要两条 prompt 只是换了主题词，结构和语言要真的跟着主题变。",
+                      "expected_output":  "Should keep the task family stable but produce visibly distinct prompts shaped by each theme's own handle. It should not return two near-identical shells with only nouns swapped.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  39,
+                      "prompt":  "帮我写一个提示词，主题是『如果文字能变成实物』。我不想要那种第一眼能用、但看起来很普通的版本。你内部可以多想几种写法，但最后只给我一版最强的，不要把中间版本展示出来。",
+                      "expected_output":  "Should run a hidden multi-candidate synthesis pass instead of returning the first acceptable draft. It should only show one final prompt, but that prompt should feel sharper and more theme-shaped than a generic first pass.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  40,
+                      "prompt":  "帮我优化一个故事提示词。我不需要你给我三版选项，但我希望你内部先比较几种不同方向，再把最好的部分合成一版最终 prompt 给我。",
+                      "expected_output":  "Should recognize hidden divergence-and-synthesis as the requested quality mechanism. It should not expose multiple drafts by default, but should produce a synthesized final prompt informed by internal comparison.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  41,
+                      "prompt":  "以后你帮我设计提示词时，默认记住我不喜欢太死板的模板、我更喜欢主题自己长出来的结构、也更希望你内部先比较再合成。请根据这种偏好帮我写一条新的提示词。",
+                      "expected_output":  "Should treat the request as a personalization signal, fold it into the user's taste model, and produce a prompt that reflects flexibility, theme-native structure, and hidden synthesis rather than visible template reuse.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  42,
+                      "prompt":  "虽然我平时喜欢高概念和意象感，但这次帮我写一个提示词时请务实一点、朴素一点、别太花。你要能覆盖我过去的偏好，而不是被它绑死。",
+                      "expected_output":  "Should show that current-turn instructions override stored taste. It should personalize softly, but not force previous stylistic preferences onto a request that explicitly asks for plainer delivery.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  43,
+                      "prompt":  "把这个很乱的 prompt 改成结构化中文，逻辑别变，示例别动，也不用跟我讲太多原理，直接给结果。",
+                      "expected_output":  "Should choose Lite mode or equivalent low-cost execution. It should avoid unnecessary deep search and return a direct structured rewrite quickly.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  44,
+                      "prompt":  "帮我写一个最强版提示词，主题是『如果城市晚上会变形』。我明确要你内部多想几种方向，再合成一版最好的，别给我第一版就交。",
+                      "expected_output":  "Should choose Deep mode or equivalent heavy execution. It should use hidden divergence and synthesis because the user explicitly asked for strongest refinement.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  45,
+                      "prompt":  "你前面已经知道我最常不满意的是模板味和第一版太普通。这次再帮我写一个奇想题提示词时，把这些历史经验当成默认防错项，但不要把它们写出来。",
+                      "expected_output":  "Should reuse decision cache and known failure priorities as hidden defaults. It should not rediscover the same anti-generic decisions from scratch or expose the cache explicitly.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  46,
+                      "prompt":  "虽然我以前常让你内部多比较几种方向，但这次只是简单压缩一个 prompt。别上重流程，直接快一点。",
+                      "expected_output":  "Should let current-turn instruction override cached heavy-mode tendencies. It should downshift to Lite or Standard mode instead of reflexively using Deep mode.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  47,
+                      "prompt":  "帮我写一个提示词，主题是『如果文字能变成实物』。我不要你内部整版写三稿再比，我更想让你先固定主方向，只比较最关键的几个部分，然后合成出一版最终 prompt。",
+                      "expected_output":  "Should prefer local component-level comparison over multiple whole prompt drafts. It should keep a shared backbone and only vary the most important moving parts before synthesizing the final prompt.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  48,
+                      "prompt":  "以后记住我的偏好时，不要每次都从长篇历史描述里重新读我。你应该把我稳定的偏好压成几个更好排序的维度，再帮我写提示词。",
+                      "expected_output":  "Should recognize that taste memory should be compressed into compact reusable preference dimensions rather than repeatedly relying on long narrative recall.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  49,
+                      "prompt":  "这次我只要一个普通但不出错的提示词，不需要你做满所有隐藏优化。只要任务 fit 和 artifact fit 已经很稳，就直接停。",
+                      "expected_output":  "Should apply early stop and avoid unnecessary extra hidden search once task fit and artifact fit are already strong enough for the user's stated goal.",
+                      "files":  [
+
+                                ]
+                  },
+                  {
+                      "id":  50,
+                      "prompt":  "我想让你以后不只是记住我喜欢什么，还记住你自己以前是靠哪些决策赢的。比如这种创意题，通常先比主题抓手和成品单位就够了，不要每次都重新摸索。",
+                      "expected_output":  "Should distinguish decision cache from taste memory and reuse prior winning routing or local comparison defaults instead of rediscovering them from scratch.",
+                      "files":  [
+
+                                ]
+                  }
+              ]
+}
